@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/fonts.css"/>
   <link rel="stylesheet" href="styles/styles.css"/>
 </head>
 <body>
@@ -11,36 +12,42 @@
     <header class="header">
       <div class="container header__inner">
         <a href="#" class="logo">
-          <span class="logo_icon"><img src='images/logo.svg'/></span>
+          <span class="logo_icon">
+            <!-- Указываем размеры логотипа (например, 40x40) и alt -->
+            <img src="images/logo.svg" alt="Furniro logo" width="50" height="32">
+          </span>
           <span class="logo_text">Furniro</span>
         </a>
 
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="#" class="nav__link">Home</a></li>
-            <li><a href="#" class="nav__link">Shop</a></li>
-            <li><a href="#" class="nav__link">About</a></li>
-            <li><a href="#" class="nav__link">Contact</a></li>
-          </ul>
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link">Shop</a></li>
+          <li><a href="#" class="nav__link">About</a></li>
+          <li><a href="#" class="nav__link">Contact</a></li>
+        </ul>
         </nav>
 
         <div class="header__icons">
-          <div class="header__icon"><img src='images/human.svg'/></div>
-          <div class="header__icon"><img src='images/search.svg'/></div>
-          <div class="header__icon"><img src='images/heart.svg'/></div>
-          <div class="header__icon"><img src='images/basket.svg'/></div>
+           <a class="header__icon"><img src="images/human.svg" alt="" width="23.33" height="18.67" /></a>
+           <a class="header__icon"><img src="images/search.svg" alt="" width="22.17" height="22.17" /></a>
+           <a class="header__icon"><img src="images/heart.svg" alt="" width="23.33" height="20.81" /></a>
+           <a class="header__icon"><img src="images/basket.svg" alt="" width="24.53" height="22.06" /></a>
         </div>
       </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__image-wrapper">
           <!-- сюда можно подставить фон -->
           <img
             src="images/new_arrival.jpg"
-            alt="Hero"
+            alt="New collection furniture"
             class="hero__image"
+            width="1440"
+            height="1007.93"
           />
         </div>
 
