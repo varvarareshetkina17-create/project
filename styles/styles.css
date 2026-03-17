@@ -99,7 +99,7 @@
       color: #888;
     }
 
-    /* ============ HERO ============ */
+   
     .hero {
       position: relative;
       overflow: hidden;
@@ -168,7 +168,7 @@
 
 
 
-    /* ============ АДАПТИВ ============ */
+
     @media (max-width: 992px) {
       .hero__banner {
         position: static;
