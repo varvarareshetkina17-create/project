@@ -1,0 +1,211 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', 'Montserrat', sans-serif;        
+      color: #333;
+      background-color: #ffffff;
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1340px;
+      margin: 0 auto;
+
+    }
+
+    /* ============ ШАПКА ============ */
+    .header {
+      background-color: #ffffff;
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 0 25px 55px;
+      gap: 32px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 34px;
+      letter-spacing: 0.06em;
+    }
+
+    .logo_icon {
+      width: 50px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding-left: 100px;
+    }
+
+    .nav__list {
+      display: flex;
+      list-style: none;
+      gap: 80px;
+      font-size: 16px;
+      font-weight: medium;
+    }
+
+    .nav__link {
+      position: relative;
+      padding-bottom: 2px;
+    }
+    
+    .header__icons {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 18px;
+    }
+
+    .header__icon {
+      width: 52px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #888;
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+	  max-width:1340px;
+    }
+
+    .hero__image-wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero__banner {
+      position: absolute;
+      right: 10%;
+      top: 15%;
+      max-width: 420px;
+      background-color: #f5e2b9;
+      padding: 30px 32px;
+      border-radius: 12px;
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero__eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8a6b1c;
+      margin-bottom: 10px;
+    }
+
+    .hero__title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #3a3a3a;
+    }
+
+    .hero__text {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    .hero__button {
+      display: inline-block;
+      padding: 12px 32px;
+      border-radius: 0;
+      background-color: #b88e2f;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .hero__button:hover {
+      background-color: #9f7a24;
+    }
+
+
+
+    /* ============ АДАПТИВ ============ */
+    @media (max-width: 992px) {
+      .hero__banner {
+        position: static;
+        margin-top: 24px;
+        box-shadow: none;
+      }
+
+      .hero__inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header__inner {
+        flex-wrap: wrap;
+      }
+
+      .nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .nav__list {
+        gap: 16px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 24px 0 36px;
+      }
+
+      .hero__banner {
+        padding: 20px 18px;
+      }
+
+      .hero__title {
+        font-size: 24px;
+      }
+    }
