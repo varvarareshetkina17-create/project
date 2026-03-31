@@ -128,7 +128,7 @@
 
     .hero__eyebrow {
       font-size: 12px;
-      letter-spacing: 3px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #8a6b1c;
       margin-bottom: 10px;
