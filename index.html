@@ -2,65 +2,238 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Document</title>
+  <title>Furniro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/fonts.css"/>
   <link rel="stylesheet" href="styles/styles.css"/>
 </head>
 <body>
-    <!-- ШАПКА -->
-    <header class="header">
-      <div class="container header__inner">
-        <a href="#" class="logo">
-          <span class="logo_icon">
-            <!-- Указываем размеры логотипа (например, 40x40) и alt -->
-            <img src="images/logo.svg" alt="логотип Furniro" width="50" height="32">
-          </span>
-          <span class="logo_text">Furniro</span>
-        </a>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <span class="logo__icon">
+          <img src="images/logo.svg" alt="Логотип Furniro" width="50" height="32" />
+        </span>
+        <span class="logo__text">Furniro</span>
+      </a>
 
-        <nav class="nav">
-          <ul class="nav__list">
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
           <li><a href="#" class="nav__link">Home</a></li>
           <li><a href="#" class="nav__link">Shop</a></li>
           <li><a href="#" class="nav__link">About</a></li>
           <li><a href="#" class="nav__link">Contact</a></li>
         </ul>
-        </nav>
+      </nav>
 
-        <div class="header__icons">
-           <a href="#" class="header__icon"><img src="images/human.svg" alt="профиль" width="23" height="19" /></a>
-           <a href="#" class="header__icon"><img src="images/search.svg" alt="поиск" width="22" height="22" /></a>
-           <a href="#" class="header__icon"><img src="images/heart.svg" alt="избранное" width="23" height="21" /></a>
-           <a href="#" class="header__icon"><img src="images/basket.svg" alt="корзина" width="25" height="22" /></a>
-        </div>
+      <div class="header__icons">
+        <a href="#" class="header__icon" aria-label="Profile"><img src="images/human.svg" alt="" width="23" height="19" /></a>
+        <a href="#" class="header__icon" aria-label="Search"><img src="images/search.svg" alt="" width="22" height="22" /></a>
+        <a href="#" class="header__icon" aria-label="Favorites"><img src="images/Heart.svg" alt="" width="23" height="21" /></a>
+        <a href="#" class="header__icon" aria-label="Cart"><img src="images/basket.svg" alt="" width="25" height="22" /></a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- HERO -->
+  <main>
     <section class="hero">
       <div class="container hero__inner">
-        <div class="hero__image-wrapper">
-          <!-- сюда можно подставить фон -->
-          <img
-            src="images/new_arrival.jpg"
-            alt="New collection furniture"
-            class="hero__image"
-            width="1440"
-            height="1008"
-          />
-        </div>
-
+        <div class="hero__photo"></div>
         <div class="hero__banner">
-          <div class="hero__eyebrow">New Arrival</div>
+          <p class="hero__eyebrow">New Arrival</p>
           <h1 class="hero__title">Discover Our New Collection</h1>
-          <p class="hero__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis.
-          </p>
-          <a href="#" class="hero__button">Buy Now</a>
+          <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+          <a href="#" class="button button--primary">BUY NOW</a>
         </div>
       </div>
     </section>
+
+    <section class="range section">
+      <div class="container">
+        <h2 class="section__title">Browse The Range</h2>
+        <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="range__grid">
+          <article class="range__item">
+            <div class="media media--dining"></div>
+            <h3>Dining</h3>
+          </article>
+          <article class="range__item">
+            <div class="media media--living"></div>
+            <h3>Living</h3>
+          </article>
+          <article class="range__item">
+            <div class="media media--bedroom"></div>
+            <h3>Bedroom</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="products section">
+      <div class="container">
+        <h2 class="section__title">Our Products</h2>
+        <div class="products__grid">
+          <article class="product-card">
+            <span class="badge badge--discount">-30%</span>
+            <div class="product-card__media media media--p1"></div>
+            <div class="product-card__body">
+              <h3>Syltherine</h3>
+              <p>Stylish cafe chair</p>
+              <p class="price">Rp 2.500.000 <span class="price__old">Rp 3.500.000</span></p>
+            </div>
+          </article>
+          <article class="product-card product-card--active">
+            <div class="product-card__media media media--p2"></div>
+            <div class="product-card__overlay">
+              <a href="#" class="product-card__cta">Add to cart</a>
+              <div class="product-card__links">
+                <a href="#"><img src="images/gridicons_share.png" alt="" width="16" height="16" />Share</a>
+                <a href="#"><img src="images/compare-svgrepo-com 1.png" alt="" width="16" height="16" />Compare</a>
+                <a href="#"><img src="images/Heart.png" alt="" width="16" height="16" />Like</a>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3>Leviosa</h3>
+              <p>Stylish cafe chair</p>
+              <p class="price">Rp 2.500.000</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <span class="badge badge--discount">-50%</span>
+            <div class="product-card__media media media--p3"></div>
+            <div class="product-card__body">
+              <h3>Lolito</h3>
+              <p>Luxury big sofa</p>
+              <p class="price">Rp 7.000.000 <span class="price__old">Rp 14.000.000</span></p>
+            </div>
+          </article>
+          <article class="product-card">
+            <span class="badge badge--new">New</span>
+            <div class="product-card__media media media--p4"></div>
+            <div class="product-card__body"><h3>Respira</h3><p>Outdoor bar table and stool</p><p class="price">Rp 500.000</p></div>
+          </article>
+          <article class="product-card">
+            <div class="product-card__media media media--p5"></div>
+            <div class="product-card__body"><h3>Grifo</h3><p>Night lamp</p><p class="price">Rp 1.500.000</p></div>
+          </article>
+          <article class="product-card">
+            <span class="badge badge--new">New</span>
+            <div class="product-card__media media media--p6"></div>
+            <div class="product-card__body"><h3>Muggo</h3><p>Small mug</p><p class="price">Rp 150.000</p></div>
+          </article>
+          <article class="product-card">
+            <span class="badge badge--discount">-50%</span>
+            <div class="product-card__media media media--p7"></div>
+            <div class="product-card__body"><h3>Pingky</h3><p>Cute bed set</p><p class="price">Rp 7.000.000</p></div>
+          </article>
+          <article class="product-card">
+            <span class="badge badge--new">New</span>
+            <div class="product-card__media media media--p8"></div>
+            <div class="product-card__body"><h3>Potty</h3><p>Minimalist flower pot</p><p class="price">Rp 500.000</p></div>
+          </article>
+        </div>
+        <a href="#" class="button button--outline">Show More</a>
+      </div>
+    </section>
+
+    <section class="inspiration section">
+      <div class="container inspiration__inner">
+        <div class="inspiration__content">
+          <h2>50+ Beautiful rooms inspiration</h2>
+          <p>Our designer already made a lot of beautiful prototipe of rooms that inspire you.</p>
+          <a href="#" class="button button--primary">Explore More</a>
+        </div>
+        <div class="inspiration__gallery">
+          <div class="inspiration__slide media media--room-main">
+            <div class="inspiration__label">
+              <p>01 &mdash; Bed Room</p>
+              <h3>Inner Peace</h3>
+            </div>
+            <a href="#" class="inspiration__next" aria-label="Next inspiration">
+              <img src="images/arrow.svg" alt="" width="24" height="24" />
+            </a>
+          </div>
+          <div class="inspiration__slide">
+            <div class="inspiration__slide media media--room-side"></div>
+            <div class="inspiration__controls" aria-hidden="true">
+              <span class="inspiration__dot inspiration__dot--active"></span>
+              <span class="inspiration__dot"></span>
+              <span class="inspiration__dot"></span>
+              <span class="inspiration__dot"></span>
+            </div>
+          </div>
+          <div class="inspiration__slide inspiration__slide--peek media media--room-peek">
+            <div  class="inspiration__to_right">
+              <img class="inspiration__control-next" src="images/Group 13.png" alt="" width="80" height="80" />
+            </div>
+  
+          </div>
+         </div>
+    </div>
+    </section>
+
+    <section class="social section">
+      <div class="container social__header">
+        <p class="social__eyebrow">Share your setup with</p>
+        <h2 class="social__title">#FuniroFurniture</h2>
+      </div>
+      <div class="social__mosaic">
+        <div class="social__col social__c1">
+          <div class="social__row social__c1r1">
+            <div class="social__item media media--s1"></div>
+            <div class="social__item media media--s3"></div>
+          </div>
+          <div class="social__row social__c1r2">
+            <div class="social__item media media--s2"></div>
+            <div class="social__item media media--s4"></div>
+          </div>
+        </div>
+        <div class="social__col social__c2">
+        <div class="social__item media media--s5"></div>
+        </div>
+        <div class="social__col social__c3">
+          <div class="social__row social__c3r1">
+            <div class="social__item media media--s6"></div>
+            <div class="social__item media media--s8"></div>
+          </div>
+          <div class="social__row social__c3r2">
+            <div class="social__item media media--s7"></div>
+            <div class="social__item media media--s9"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col_1">
+        <h3>Funiro.</h3>
+        <p>400 University Drive Suite 200 Coral Gables, <br>FL 33134 USA</p>
+      </div>
+      <div class="footer__col footer__col_2">
+        <h4>Links</h4>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer__col footer__col_3">
+        <h4>Help</h4>
+        <a href="#">Payment Options</a>
+        <a href="#">Returns</a>
+        <a href="#">Privacy Policies</a>
+      </div>
+      <div class="footer__col footer__col_4">
+        <h4>Newsletter</h4>
+        <form class="footer__form">
+          <input type="email" placeholder="Enter Your Email Address" />
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer__bottom">2023 furino. All rights reverved</div>
+  </footer>
 </body>
 </html>
