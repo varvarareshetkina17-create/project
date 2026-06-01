@@ -22,7 +22,7 @@ a {
 }
 
 .container {
-  width: min(100%, 1280px);
+  width: min(100%, 1240px);
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -54,7 +54,7 @@ a {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.02em;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   transition: 0.2s ease;
 }
 
@@ -141,6 +141,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .hero {
@@ -184,7 +188,6 @@ a {
   font-size: 52px;
   line-height: 65px;
   margin-bottom: 17px;
-  max-width: 440px;
 }
 
 .hero__text {
@@ -219,9 +222,9 @@ a {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 32px;
-  padding-top: 26px;
-  /* margin-left: -26px;
-  margin-right: -26px; */
+  padding-top: 24px;
+  margin-left: -26px;
+  margin-right: -26px;
 }
 
 .product-card {
@@ -328,7 +331,7 @@ a {
 .inspiration {
   background: #fcf8f3;
   padding: 44px 0;
-  margin-top: 80px;
+  margin-top: 56px;
 }
 
 .inspiration__inner {
@@ -654,7 +657,7 @@ a {
 /* Decorative placeholders matching sections */
 .media--dining,
 .media--p1 {
-  background-image: url("../images/Mask Group.png");
+  background-image: url("../images/Mask_Group.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -662,7 +665,7 @@ a {
 
 .media--living,
 .media--p2 {
-  background-image: url("../images/Image-living room.png");
+  background-image: url("../images/living_room.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -670,7 +673,7 @@ a {
 
 .media--bedroom,
 .media--p3 {
-  background-image: url("../images/Mask Group(1).png");
+  background-image: url("../images/Mask_Group1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -933,4 +936,105 @@ a {
     line-height: 1.45;
     margin-bottom: 24px;
   }
+}
+
+.auth-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.auth-modal--open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.auth-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(58, 58, 58, 0.72);
+}
+
+.auth-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  background: #fff3e3;
+  padding: 40px 36px 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.auth-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: #3a3a3a;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.auth-modal__close:hover {
+  color: #b88e2f;
+}
+
+.auth-modal__title {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.auth-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3a3a3a;
+}
+
+.auth-modal__field input {
+  border: 1px solid #d9d9d9;
+  height: 75px;
+  padding: 0 20px;
+  font: inherit;
+  outline: none;
+  border-radius: 10px;
+}
+
+.auth-modal__field input:focus {
+  border-color: #b88e2f;
+}
+
+.auth-modal__submit {
+  width: 100%;
+  margin-top: 8px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 55px;
 }
