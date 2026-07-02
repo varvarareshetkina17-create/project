@@ -32,7 +32,10 @@
         </button>
         <a href="#" class="header__icon" aria-label="Search"><img src="images/search.svg" alt="" width="22" height="22" /></a>
         <a href="#" class="header__icon" aria-label="Favorites"><img src="images/Heart.svg" alt="" width="23" height="21" /></a>
-        <a href="#" class="header__icon" aria-label="Cart"><img src="images/basket.svg" alt="" width="25" height="22" /></a>
+        <button id="cart-open" class="header__icon" aria-label="Cart">
+          <img src="images/basket.svg" alt="" width="25" height="22" />
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
       </div>
     </div>
   </header>
@@ -55,20 +58,18 @@
         <h2 class="section__title">Browse The Range</h2>
         <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="range__grid">
-        <article class="range__item">
-  <img class="range__image" src="images/Mask_Group.png" alt="Dining">
-  <h3>Dining</h3>
-</article>
-
-<article class="range__item">
-  <img class="range__image" src="images/living_room.png" alt="Living">
-  <h3>Living</h3>
-</article>
-
-<article class="range__item">
-  <img class="range__image" src="images/Mask_Group1.png" alt="Bedroom">
-  <h3>Bedroom</h3>
-</article>
+          <article class="range__item">
+            <img class="range__image" src="images/Mask_Group.png" alt="Dining">
+            <h3>Dining</h3>
+          </article>
+          <article class="range__item">
+            <img class="range__image" src="images/living_room.png" alt="Living">
+            <h3>Living</h3>
+          </article>
+          <article class="range__item">
+            <img class="range__image" src="images/Mask_Group1.png" alt="Bedroom">
+            <h3>Bedroom</h3>
+          </article>
         </div>
       </div>
     </section>
@@ -77,99 +78,104 @@
       <div class="container">
         <h2 class="section__title">Our Products</h2>
 
-<div class="products__grid">
+        <div class="products__grid">
 
-  <article class="product-card">
-    <span class="badge badge--discount">-30%</span>
-    <img class="product-card__media" src="images/Syltherine.png" alt="Syltherine">
-    <div class="product-card__body">
-      <h3>Syltherine</h3>
-      <p>Stylish cafe chair</p>
-      <p class="price">Rp 2.500.000 <span class="price__old">Rp 3.500.000</span></p>
-    </div>
-  </article>
+          <article class="product-card" data-id="1" data-name="Syltherine" data-price="2500000" data-discount="30">
+            <span class="badge badge--discount">-30%</span>
+            <img class="product-card__media" src="images/Syltherine.png" alt="Syltherine">
+            <div class="product-card__body">
+              <h3>Syltherine</h3>
+              <p>Stylish cafe chair</p>
+              <p class="price">Rp 2.500.000 <span class="price__old">Rp 3.500.000</span></p>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </article>
 
-  <article class="product-card product-card--active">
-    <img class="product-card__media" src="images/lolito.jpg" alt="Leviosa">
+          <article class="product-card product-card--active" data-id="2" data-name="Leviosa" data-price="2500000">
+            <img class="product-card__media" src="images/lolito.jpg" alt="Leviosa">
+            <div class="product-card__overlay">
+              <button class="product-card__cta add-to-cart">Add to cart</button>
+              <div class="product-card__links">
+                <a href="#"><img src="images/gridicons_share.png" alt="" width="16" height="16">Share</a>
+                <a href="#"><img src="images/compare-svgrepo-com1.png" alt="" width="16" height="16">Compare</a>
+                <a href="#"><img src="images/Heart.png" alt="" width="16" height="16">Like</a>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3>Leviosa</h3>
+              <p>Stylish cafe chair</p>
+              <p class="price">Rp 2.500.000</p>
+            </div>
+          </article>
 
-    <div class="product-card__overlay">
-      <a href="#" class="product-card__cta">Add to cart</a>
-      <div class="product-card__links">
-        <a href="#"><img src="images/gridicons_share.png" alt="" width="16" height="16">Share</a>
-        <a href="#"><img src="images/compare-svgrepo-com1.png" alt="" width="16" height="16">Compare</a>
-        <a href="#"><img src="images/Heart.png" alt="" width="16" height="16">Like</a>
-      </div>
-    </div>
+          <article class="product-card" data-id="3" data-name="Lolito" data-price="7000000" data-discount="50">
+            <span class="badge badge--discount">-50%</span>
+            <img class="product-card__media" src="images/lolito.jpg" alt="Lolito">
+            <div class="product-card__body">
+              <h3>Lolito</h3>
+              <p>Luxury big sofa</p>
+              <p class="price">Rp 7.000.000 <span class="price__old">Rp 14.000.000</span></p>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </article>
 
-    <div class="product-card__body">
-      <h3>Leviosa</h3>
-      <p>Stylish cafe chair</p>
-      <p class="price">Rp 2.500.000</p>
-    </div>
-  </article>
+          <article class="product-card" data-id="4" data-name="Respira" data-price="500000">
+            <span class="badge badge--new">New</span>
+            <img class="product-card__media" src="images/respira.jpg" alt="Respira">
+            <div class="product-card__body">
+              <h3>Respira</h3>
+              <p>Outdoor bar table and stool</p>
+              <p class="price">Rp 500.000</p>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </article>
 
-  <article class="product-card">
-    <span class="badge badge--discount">-50%</span>
-    <img class="product-card__media" src="images/lolito.jpg" alt="Lolito">
-    <div class="product-card__body">
-      <h3>Lolito</h3>
-      <p>Luxury big sofa</p>
-      <p class="price">Rp 7.000.000 <span class="price__old">Rp 14.000.000</span></p>
-    </div>
-  </article>
+          <article class="product-card" data-id="5" data-name="Grifo" data-price="1500000">
+            <img class="product-card__media" src="images/grifo.jpg" alt="Grifo">
+            <div class="product-card__body">
+              <h3>Grifo</h3>
+              <p>Night lamp</p>
+              <p class="price">Rp 1.500.000</p>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </article>
 
-  <article class="product-card">
-    <span class="badge badge--new">New</span>
-    <img class="product-card__media" src="images/respira.jpg" alt="Respira">
-    <div class="product-card__body">
-      <h3>Respira</h3>
-      <p>Outdoor bar table and stool</p>
-      <p class="price">Rp 500.000</p>
-    </div>
-  </article>
+          <article class="product-card" data-id="6" data-name="Muggo" data-price="150000">
+            <span class="badge badge--new">New</span>
+            <img class="product-card__media" src="images/muggo.jpg" alt="Muggo">
+            <div class="product-card__body">
+              <h3>Muggo</h3>
+              <p>Small mug</p>
+              <p class="price">Rp 150.000</p>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </article>
 
-  <article class="product-card">
-    <img class="product-card__media" src="images/grifo.jpg" alt="Grifo">
-    <div class="product-card__body">
-      <h3>Grifo</h3>
-      <p>Night lamp</p>
-      <p class="price">Rp 1.500.000</p>
-    </div>
-  </article>
+          <article class="product-card" data-id="7" data-name="Pingky" data-price="7000000" data-discount="50">
+            <span class="badge badge--discount">-50%</span>
+            <img class="product-card__media" src="images/pingky.jpg" alt="Pingky">
+            <div class="product-card__body">
+              <h3>Pingky</h3>
+              <p>Cute bed set</p>
+              <p class="price">Rp 7.000.000</p>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </article>
 
-  <article class="product-card">
-    <span class="badge badge--new">New</span>
-    <img class="product-card__media" src="images/muggo.jpg" alt="Muggo">
-    <div class="product-card__body">
-      <h3>Muggo</h3>
-      <p>Small mug</p>
-      <p class="price">Rp 150.000</p>
-    </div>
-  </article>
+          <article class="product-card" data-id="8" data-name="Potty" data-price="500000">
+            <span class="badge badge--new">New</span>
+            <img class="product-card__media" src="images/potty.jpg" alt="Potty">
+            <div class="product-card__body">
+              <h3>Potty</h3>
+              <p>Minimalist flower pot</p>
+              <p class="price">Rp 500.000</p>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </article>
 
-  <article class="product-card">
-    <span class="badge badge--discount">-50%</span>
-    <img class="product-card__media" src="images/pingky.jpg" alt="Pingky">
-    <div class="product-card__body">
-      <h3>Pingky</h3>
-      <p>Cute bed set</p>
-      <p class="price">Rp 7.000.000</p>
-    </div>
-  </article>
+        </div>
 
-  <article class="product-card">
-    <span class="badge badge--new">New</span>
-    <img class="product-card__media" src="images/potty.jpg" alt="Potty">
-    <div class="product-card__body">
-      <h3>Potty</h3>
-      <p>Minimalist flower pot</p>
-      <p class="price">Rp 500.000</p>
-    </div>
-  </article>
-
-</div>
-
-<a href="#" class="button button--outline">Show more</a>
+        <a href="#" class="button button--outline">Show more</a>
       </div>
     </section>
 
@@ -200,13 +206,12 @@
             </div>
           </div>
           <div class="inspiration__slide inspiration__slide--peek media media--room-peek">
-            <div  class="inspiration__to_right">
+            <div class="inspiration__to_right">
               <img class="inspiration__control-next" src="images/Group13.png" alt="" width="80" height="80" />
             </div>
-  
           </div>
-         </div>
-    </div>
+        </div>
+      </div>
     </section>
 
     <section class="social section">
@@ -226,7 +231,7 @@
           </div>
         </div>
         <div class="social__col social__c2">
-        <div class="social__item media media--s5"></div>
+          <div class="social__item media media--s5"></div>
         </div>
         <div class="social__col social__c3">
           <div class="social__row social__c3r1">
@@ -240,7 +245,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
@@ -273,6 +277,7 @@
     <div class="container footer__bottom">2023 furino. All rights reverved</div>
   </footer>
 
+  <!-- Auth Modal -->
   <div class="auth-modal" id="auth-modal" aria-hidden="true">
     <div class="auth-modal__overlay"></div>
     <div class="auth-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
@@ -292,6 +297,32 @@
     </div>
   </div>
 
-  <script src="js/auth-modal.js"></script>
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cart-modal" aria-hidden="true">
+    <div class="cart-modal__overlay"></div>
+    <div class="cart-modal__dialog" role="dialog" aria-modal="true">
+      <button type="button" class="cart-modal__close" id="cart-close">&times;</button>
+      <h2 class="cart-modal__title">Корзина</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-total">
+        <span>Итого:</span>
+        <span id="cart-total-price">Rp 0</span>
+      </div>
+      <button id="checkout-btn" class="button button--primary">Оформить заказ</button>
+      <button id="clear-cart-btn" class="button button--outline">Очистить корзину</button>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="success-modal" id="success-modal" aria-hidden="true">
+    <div class="success-modal__overlay"></div>
+    <div class="success-modal__dialog">
+      <h2>Заказ оформлен!</h2>
+      <p>Спасибо за покупку. Ваш заказ успешно оформлен.</p>
+      <button id="success-close" class="button button--primary">OK</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
