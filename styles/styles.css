@@ -57,6 +57,7 @@ a {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 
 .button--primary {
@@ -134,6 +135,7 @@ a {
   display: flex;
   align-items: center;
   gap: 32px;
+  position: relative;
 }
 
 .header__icon {
@@ -146,6 +148,23 @@ a {
   padding: 0;
   background: transparent;
   cursor: pointer;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #b88e2f;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .hero {
@@ -235,13 +254,17 @@ a {
   position: relative;
   background: #f4f5f7;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card__media {
   width: 100%;
   height: 301px;
   overflow: hidden;
+  position: relative;
 }
+
 .product-card__media img {
   width: 100%;
   height: 100%;
@@ -250,6 +273,7 @@ a {
 
 .product-card__body {
   padding: 16px 16px 20px;
+  flex: 1;
 }
 
 .product-card h3 {
@@ -301,11 +325,16 @@ a {
   position: absolute;
   inset: 0;
   background: rgba(58, 58, 58, 0.72);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 24px;
+  z-index: 2;
+}
+
+.product-card:hover .product-card__overlay {
+  display: flex;
 }
 
 .product-card__cta {
@@ -314,6 +343,18 @@ a {
   font-size: 16px;
   font-weight: 600;
   padding: 12px 52px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  margin-top: auto;
+  padding: 10px;
+  background: #b88e2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .product-card__links {
@@ -514,14 +555,6 @@ a {
   width: 584px;
 }
 
-.social__col--4 {
-  width: 290px;
-}
-
-.social__col--5 {
-  width: 290px;
-}
-
 .social__item {
   background-size: cover;
   background-position: center;
@@ -605,24 +638,8 @@ a {
   font-weight: 500;
 }
 
-.footer__col_4 h4 {
-  margin-bottom: 27px;
-}
-
 .footer__col_1 p{
   color:#9f9f9f;
-}
-
-.footer__col_2 {
-  margin-left:110px;
-}
-
-.footer__col_3 {
-  margin-left:70px;
-}
-
-.footer__col_4 {
-  margin-left:37px;
 }
 
 .footer__col p,
@@ -666,7 +683,7 @@ a {
   color: #000;
 }
 
-/* Decorative placeholders matching sections */
+/* Decorative placeholders */
 .media--dining,
 .media--p1 {
   background-image: url("../images/Mask_Group.png");
@@ -729,26 +746,6 @@ a {
   background-repeat: no-repeat;
 }
 
-/*.media--p1 {
-  background-image: url("../images/syltherine.jpg");
-}
-
-.media--p2 {
-  background-image: url("../images/lolito.jpg");
-}
-
-.media--p3 {
-  background-image: url("../images/lolito.jpg");
-}
-
-.media--p4 {
-  background-image: url("../images/respira.jpg");
-}
-
-.media--p8 {
-  background-image: url("../images/potty.jpg");
-}
-*/
 .media--room-main {
   background-image: url("../images/inner_peace1.jpg");
   background-position: center;
@@ -757,8 +754,6 @@ a {
 .media--room-side {
   background-image: url("../images/inner_peace2.jpg");
   background-position: 42% center;
-  min-height: 486px;
-  margin-top: 0px;
 }
 
 .media--room-peek {
@@ -768,189 +763,19 @@ a {
   background-repeat: no-repeat;
 }
 
-.social .media--s1 {
-  background-image: url("../images/funirofurniture1.jpg");
-}
+/* Social images */
+.social .media--s1 { background-image: url("../images/funirofurniture1.jpg"); }
+.social .media--s2 { background-image: url("../images/funirofurniture2.jpg"); }
+.social .media--s3 { background-image: url("../images/funirofurniture3.jpg"); }
+.social .media--s4 { background-image: url("../images/funirofurniture4.jpg"); }
+.social .media--s5 { background-image: url("../images/funirofurniture5.jpg"); }
+.social .media--s6 { background-image: url("../images/funirofurniture6.jpg"); }
+.social .media--s7 { background-image: url("../images/funirofurniture7.jpg"); }
+.social .media--s8 { background-image: url("../images/funirofurniture8.jpg"); }
+.social .media--s9 { background-image: url("../images/funirofurniture9.jpg"); }
 
-.social .media--s2 {
-  background-image: url("../images/funirofurniture2.jpg");
-}
-
-.social .media--s3 {
-  background-image: url("../images/funirofurniture3.jpg");
-}
-
-.social .media--s4 {
-  background-image: url("../images/funirofurniture4.jpg");
-}
-
-.social .media--s5 {
-  background-image: url("../images/funirofurniture5.jpg");
-}
-
-.social .media--s6 {
-  background-image: url("../images/funirofurniture6.jpg");
-}
-
-.social .media--s7 {
-  background-image: url("../images/funirofurniture7.jpg");
-}
-
-.social .media--s8 {
-  background-image: url("../images/funirofurniture8.jpg");
-}
-
-.social .media--s9 {
-  background-image: url("../images/funirofurniture9.jpg");
-}
-
-@media (max-width: 1024px) {
-  .section__title {
-    font-size: 34px;
-  }
-
-  .hero__banner {
-    width: min(100%, 560px);
-    right: 30px;
-    padding: 36px 28px;
-    border-radius: 10px;
-  }
-
-  .hero__title {
-    font-size: 42px;
-    line-height: 1.2;
-  }
-
-  .products__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-  }
-
-  .inspiration__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .inspiration__gallery {
-    grid-template-columns: 1fr 1fr 80px;
-  }
-
-  .inspiration__controls {
-    grid-column: 1;
-    margin-left: 0;
-  }
-
-  .footer__inner {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-  }
-
-  .footer__col h4 {
-    margin-bottom: 24px;
-  }
-
-  .footer__col p,
-  .footer__col a {
-    margin-bottom: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header__inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 14px 0;
-  }
-
-  .nav {
-    order: 3;
-    width: 100%;
-  }
-
-  .hero__banner {
-    position: static;
-    transform: none;
-    margin-top: -24px;
-    width: 100%;
-    padding: 28px 20px;
-    border-radius: 10px;
-  }
-
-  .range__grid,
-  .products__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .social__mosaic {
-    flex-wrap: wrap;
-    padding: 16px;
-  }
-
-  .social__col {
-    width: calc(50% - 8px);
-  }
-
-  .social__col--3 {
-    width: 100%;
-  }
-
-  .social__item {
-    height: 220px !important;
-  }
-
-  .product-card__overlay {
-    inset: 0;
-  }
-}
-
-@media (max-width: 540px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  .section__title {
-    font-size: 30px;
-  }
-
-  .section__subtitle {
-    font-size: 16px;
-  }
-
-  .range__grid,
-  .products__grid,
-  .footer__inner,
-  .inspiration__gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .range__item .media,
-  .product-card__media,
-  .inspiration__slide {
-    height: 280px;
-    min-height: auto;
-  }
-
-  .inspiration__controls {
-    margin-top: 16px;
-    margin-left: 0;
-    gap: 14px;
-  }
-
-  .hero__photo {
-    min-height: 280px;
-  }
-
-  .hero__title {
-    font-size: 32px;
-  }
-
-  .hero__text {
-    font-size: 16px;
-    line-height: 1.45;
-    margin-bottom: 24px;
-  }
-}
-
-.auth-modal {
+/* Modals */
+.auth-modal, .cart-modal, .success-modal {
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -964,19 +789,19 @@ a {
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
-.auth-modal--open {
+.auth-modal--open, .cart-modal--open, .success-modal--open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.auth-modal__overlay {
+.auth-modal__overlay, .cart-modal__overlay, .success-modal__overlay {
   position: absolute;
   inset: 0;
   background: rgba(58, 58, 58, 0.72);
 }
 
-.auth-modal__dialog {
+.auth-modal__dialog, .cart-modal__dialog, .success-modal__dialog {
   position: relative;
   z-index: 1;
   width: min(100%, 420px);
@@ -984,9 +809,15 @@ a {
   padding: 40px 36px 36px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-.auth-modal__close {
+.cart-modal__dialog {
+  width: min(100%, 600px);
+}
+
+.cart-modal__close, .success-modal__dialog button {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -999,11 +830,47 @@ a {
   font-size: 28px;
   line-height: 1;
   cursor: pointer;
-  display: grid;
-  place-items: center;
 }
 
-.auth-modal__close:hover {
+.cart-items {
+  margin: 20px 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.auth-modal__close:hover, .cart-modal__close:hover {
   color: #b88e2f;
 }
 
@@ -1049,4 +916,25 @@ a {
   cursor: pointer;
   border-radius: 5px;
   height: 55px;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .products__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .range__grid,
+  .products__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .range__grid,
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
 }
